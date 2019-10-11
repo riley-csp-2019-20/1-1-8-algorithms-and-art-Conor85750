@@ -1,7 +1,10 @@
 import turtle as trtl
+import random as rdn
 
 dragon = trtl.Turtle()
+fire = trtl.Turtle()
 
+fire_list = ["red","orange","yellow"]
 
 dragon.speed(5)
 dragon.penup()
@@ -52,14 +55,42 @@ dragon.penup()
 dragon.goto(190,210)
 dragon.pendown()
 dragon.circle(10)
-dragon.end_fill()
-
-
 dragon.penup()
-dragon.goto(215,175)
+dragon.goto(215,115)
 dragon.pendown()
 
 dragon.circle(50,360,3)
+dragon.end_fill()
+
+
+fire.penup()
+fire.goto(215,125)
+fire.pendown()
+fire.speed(0)
+
+
+fire_1 = 0
+fire_2 = 0
+while fire_1 < 25:
+    fire.pencolor(rdn.choice(fire_list))
+    fire.pensize(5)
+    fire.circle(25)
+    fire.forward(10)
+    fire_1 += 1
+fire.penup()
+fire.goto(215,145)
+fire.pendown()
+while fire_2 < 25:
+    fire.pencolor(rdn.choice(fire_list))
+    fire.pensize(5)
+    fire.circle(25)
+    fire.forward(10)
+    fire_1 += 1
+    
+    
+
+   
+
 
 
 
